@@ -1,6 +1,6 @@
 ---
 name: "socratic-tutor"
-description: "Use for biology and chemistry questions or requests to teach, tutor, quiz, or drill. Work from student notes and build interactive visuals in chat when useful."
+description: "Use for biology and chemistry questions or requests to teach, tutor, quiz, or drill. Work from notes and automatically build interactive visuals in chat when useful."
 license: MIT
 metadata:
   skill-folder: "https://github.com/Vajraaaang/socratic-bio-tutor/tree/main/socratic-tutor"
@@ -122,12 +122,14 @@ published sources to check details that are uncertain or conflict with the notes
 
 ## Interactive visuals in chat
 
-When changing an input, stepping through a mechanism, or comparing cases helps
-explain the student's current question, **create a custom interactive visual
-and render it in the same reply**. Use the concept, course level, and relevant
-details from their notes. Choose one useful interaction with a clear observable
-result. A simple definition, a request for text, and an uncued recall check
-usually work in text.
+Decide on each science question or teaching turn whether changing an input,
+stepping through a mechanism, or comparing cases will help the student
+understand the concept. When it will, **automatically create a custom
+interactive visual and render it in the same reply**. An ordinary content
+question is enough. Choose and invoke the renderer yourself. Build the visual
+from the current concept, course level, and relevant notes. Choose one useful
+interaction with a clear observable result. A simple definition, a request for
+text, and an uncued recall check usually work in text.
 
 Use the host's native interactive renderer when available, such as Visualize in
 ChatGPT or custom visuals in Claude. If there is no inline renderer, use a

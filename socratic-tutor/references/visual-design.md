@@ -1,15 +1,15 @@
 # Designing a visual tutoring turn
 
-Build the visual for the specific concept in the current reply. Choose a baseline,
-one change the learner can make, and the observation the change supports. For an
+Choose the visual automatically from the student's question. Build it for the
+specific concept in the current reply. Choose a baseline, one change the learner
+can make, and the observation the change supports. For an
 ongoing lesson, keep outcomes hidden during unaided checks. For a standalone
 question, use the visual immediately with a short explanation. After a guided
 turn, use a new case to check whether the student can reason independently.
 
 ## Render in the conversation
 
-- **ChatGPT.** Use Visualize where the current chat offers it. On supported
-  accounts the student can ask for a custom visual or select `@Visualize`.
+- **ChatGPT.** Use Visualize automatically where the current chat offers it.
   [ChatGPT Visualize](https://learn.chatgpt.com/docs/visualizations)
 - **Claude.** Use an inline custom visual on supported surfaces. A rendered
   Artifact is another way to keep the interaction in the conversation.
