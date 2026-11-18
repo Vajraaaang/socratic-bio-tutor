@@ -13,7 +13,7 @@ which skills you can use independently, and revisits weak spots.
 
 ### Install from the GitHub link
 
-In a **ChatGPT Work** chat with Skills available, paste this message.
+In a regular **ChatGPT** chat, paste this message.
 
 ```text
 Can you install this GitHub as a skill?
@@ -22,9 +22,11 @@ https://github.com/Vajraaaang/socratic-bio-tutor/blob/main/socratic-tutor/SKILL.
 Use Socratic Bio Tutor as the display name. Install the full socratic-tutor folder, including its references and license.
 ```
 
-You can also select `@skill-creator` before sending the message. Choose
-**Install** when offered and check that the skill
-appears in **Plugins → Skills**. [ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) · [ChatGPT Work skill creator](https://learn.chatgpt.com/docs/build-skills#create-a-skill)
+Choose **Install** when ChatGPT offers it, then check **Plugins → Skills**.
+If you need to start from the Skills page, choose **Create → Create with chat**
+and send the same message. Skills availability depends on your account and
+workspace. You can also [use the tutor in any chat](#use-in-any-chat).
+[ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 
 For **Codex**, you can paste the same message. For explicit installation, ask
 `$skill-installer` to install the [complete GitHub skill folder](https://github.com/Vajraaaang/socratic-bio-tutor/tree/main/socratic-tutor).
