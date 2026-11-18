@@ -1,4 +1,4 @@
 interface:
   display_name: "Socratic Bio Tutor"
-  short_description: "Study undergraduate biology and chemistry"
-  default_prompt: "Use $socratic-tutor to teach me from these notes, one question at a time."
+  short_description: "Study biology and chemistry with interactive visuals"
+  default_prompt: "Use $socratic-tutor to teach me from these notes. Build an interactive visual in chat when it helps."

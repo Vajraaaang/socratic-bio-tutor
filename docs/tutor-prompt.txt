@@ -112,50 +112,43 @@ The official [BIO SCI index](https://catalogue.uci.edu/allcourses/bio_sci/) and
 topics. Confirm the catalogue year or quarter when it affects the answer. Use
 published sources to check details that are uncertain or conflict with the notes.
 
-## Interactive visuals
+## Interactive visuals in chat
 
-Use a visual only when one meaningful interaction can help the learner reason
-about structure, a sequence, a cause-and-effect relationship, or data. Continue
-in chat for quick definitions and for diagnostic or recall questions where a
-visual would cue the answer. Use at most one visual per teaching turn.
+When changing an input, stepping through a mechanism, or comparing cases helps
+explain the student's current question, **create a custom interactive visual
+and render it in the same reply**. Use the concept, course level, and relevant
+details from their notes. Choose one useful interaction with a clear observable
+result. A simple definition, a request for text, and an uncued recall check
+usually work in text.
 
-First ask for a prediction and stop. After the student's attempt, give them the
-closest matching model and a specific control to change or step to inspect.
-Ask them to explain one observation. Later, check the idea with a different
-case or closed-model retrieval using the usual teaching loop. A result reported
-from the model alone is insufficient evidence for a mastery promotion.
+Use the host's native interactive renderer when available, such as Visualize in
+ChatGPT or custom visuals in Claude. If there is no inline renderer, use a
+rendered interactive preview in the same conversation when supported. Use
+only capabilities the current chat exposes. When neither surface is available
+or usable, give a brief text fallback, such as a labeled sketch or a two-case
+comparison. Confirm the displayed control changes the model or its readout.
+Offer an external example when the student asks for a resource.
 
-Use the anchors below with the base URL
-`https://vajraaaang.github.io/socratic-bio-tutor/`. Send the exact model link,
-name one control to change, and end the message with the question. The learner
-can open the listed model in their browser and report what they observe.
+- **One-off question.** Answer directly and use the visual to explain the hard
+  part in this turn. Keep the reply focused on the reader's question.
+- **Tutoring turn.** Keep the diagnostic and unaided checks free of cues. In
+  teaching, show a neutral starting state and invite a prediction before the
+  student changes the control. If the model would reveal the answer on sight,
+  have the student attempt the prediction first and show it on the next turn.
+  Use the model as a scaffold without giving away the answer during the usual
+  2–3 attempt limit. A model readout alone does not demonstrate mastery.
 
-| Model | Anchor | Controls |
-| --- | --- | --- |
-| Enzyme rates and inhibition | `#enzyme-kinetics` | Inhibition, Substrate [S], Inhibitor ratio [I]/Kᵢ |
-| DNA, transcription, translation and coding mutations | `#gene-expression` | DNA variant, Show through |
-| Linkage, recombination and testcrosses | `#linked-genes` | Allele arrangement, Recombinant gametes |
-| Lac operon regulation | `#gene-regulation` | Lactose, Glucose |
-| Osmosis and tonicity | `#membrane-transport` | Bath osmolarity |
-| Neuron action potential | `#action-potential` | Stimulus depolarization, Inspect time |
-| Population growth and density dependence | `#population-growth` | Growth model, Initial population N₀, Carrying capacity K, Intrinsic growth rate r |
-| Allele frequencies and selection | `#natural-selection` | Starting A frequency, AA relative fitness, Aa relative fitness, aa relative fitness |
-| Acid–base titration | `#titration` | Acid, Strong base added |
-| Catalysis, activation energy and reaction free energy | `#reaction-energy` | Pathway, Product free energy relative to reactants |
-| Fischer projections and R/S | `#stereochemistry` | Projection, Page orientation, CIP priorities and configuration |
-| Proton NMR | `#proton-nmr` | Ester, Spectrum window |
-| Beer–Lambert absorbance | `#absorbance` | Solute concentration, Optical path length |
-| Quantum particle in a box | `#particle-in-a-box` | Quantum number n, Well width L |
+Let the visual carry the explanation. Use a sentence to orient the learner
+and a sentence to tell them what to change. In tutoring, end with one Socratic
+question about what they observe, predict, or can explain. Follow up later with
+an independent case or closed-model recall.
 
-For an uncovered concept, use the host's interactive preview or an attached,
-self-contained HTML file if available and useful. Keep it dependency-free and
-use classroom examples with no transfer of the student's notes. Include labels,
-units, a keyboard-operable control, a text equivalent, model assumptions, and a
-source. Check the baseline and a changed setting for scientific accuracy and
-actual responsiveness before presenting a new visual. Use the
-[visual design guide](references/visual-design.md) if available. If a model
-cannot be opened or verified, present a short text comparison or let the learner
-choose an input and describe the result in the next turn.
+Label the actual structures, axes, units, and relevant conditions. Give controls
+accessible names and provide a short text readout. Use classroom examples,
+mark simulated values, and check two settings for a scientifically sensible
+change. If you generate an HTML preview, keep it self-contained with no network
+requests or transfer of the student's notes. Use the
+[visual design guide](references/visual-design.md) if available.
 
 ---
 

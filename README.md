@@ -2,11 +2,12 @@
 
 A question-by-question study tutor for undergraduate biology and chemistry.
 Bring lecture notes, a syllabus, a practice problem, or a topic you want to
-master. The tutor checks what you know, asks one question at a time, tracks
-which skills you can use independently, and revisits weak spots.
+master. The tutor asks one question at a time and revisits weak spots. When a
+concept is easier to understand by changing something or stepping through it,
+the tutor builds a visual for your question in the conversation.
 
 [**Start tutoring**](#start-tutoring) ·
-[**Open the interactive lab**](https://vajraaaang.github.io/socratic-bio-tutor/) ·
+[**Try an in-chat visual**](#try-an-in-chat-visual) ·
 [**UCI curriculum guide**](socratic-tutor/references/uci-curriculum.md)
 
 ## Start tutoring
@@ -44,6 +45,21 @@ to teach me CHEM 51A stereochemistry.” In ChatGPT you can also select the
 installed skill with `@`. In Codex you can use `$socratic-tutor`.
 [Skill invocation](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills)
 
+### Try an in-chat visual
+
+> Why does lowering pH help hemoglobin unload oxygen in tissues?
+
+In a chat with interactive rendering, the tutor can build an oxygen-saturation
+curve with a pH control and explain what to look for in a sentence or two.
+In an ongoing lesson it can ask you to predict what will happen before you
+move the control. A quick definition can stay in text.
+
+If you want a visual and ChatGPT replies in text, select `@Visualize` when
+available and ask again. Claude can render custom visuals in supported chats.
+The tutor uses a brief explanation in text-only chats.
+[ChatGPT Visualize](https://learn.chatgpt.com/docs/visualizations) ·
+[Claude custom visuals](https://support.claude.com/en/articles/13979539-custom-visuals-in-chat-and-cowork)
+
 ### Install with the ZIP
 
 [**Download socratic-tutor.zip**](https://github.com/Vajraaaang/socratic-bio-tutor/releases/latest/download/socratic-tutor.zip)
@@ -69,11 +85,11 @@ change the difficulty, and **just tell me** when you need the answer to the
 current question. Use **save state** and then **resume from:** with the saved
 block in a new session.
 
-## Interactive science lab
+## Browser practice lab
 
-The tutor uses a model when you can test a prediction by changing a variable,
-working through stages, or comparing evidence. Each browser model includes
-controls, a text readout, and its assumptions and source.
+For independent practice, open a model in the
+[browser lab](https://vajraaaang.github.io/socratic-bio-tutor/). Each model
+includes controls, a text readout, and its assumptions and source.
 
 | Biology | Chemistry |
 | --- | --- |
@@ -86,9 +102,7 @@ controls, a text readout, and its assumptions and source.
 | [Population growth](https://vajraaaang.github.io/socratic-bio-tutor/#population-growth) | |
 | [Natural selection](https://vajraaaang.github.io/socratic-bio-tutor/#natural-selection) | |
 
-For other topics, the tutor can work from your notes and make a small
-interactive visual when the chat supports it. The
-[UCI curriculum guide](socratic-tutor/references/uci-curriculum.md) covers the
+The [UCI curriculum guide](socratic-tutor/references/uci-curriculum.md) covers the
 introductory sequences, upper-division areas, and lab and data reasoning.
 [Teaching and visual design sources](socratic-tutor/references/visual-design.md)
 

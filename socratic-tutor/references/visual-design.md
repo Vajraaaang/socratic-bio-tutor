@@ -1,9 +1,29 @@
 # Designing a visual tutoring turn
 
-Use a model when manipulating a parameter, stepping through stages, or comparing
-representations gives the learner evidence to reason from. Keep the original
-tutoring loop. Ask one question before the reveal, one after the student has
-looked, and a new transfer or recall question after feedback.
+Build the visual for the specific concept in the current reply. Choose a baseline,
+one change the learner can make, and the observation the change supports. For an
+ongoing lesson, keep outcomes hidden during unaided checks. For a standalone
+question, use the visual immediately with a short explanation. After a guided
+turn, use a new case to check whether the student can reason independently.
+
+## Render in the conversation
+
+- **ChatGPT.** Use Visualize where the current chat offers it. On supported
+  accounts the student can ask for a custom visual or select `@Visualize`.
+  [ChatGPT Visualize](https://learn.chatgpt.com/docs/visualizations)
+- **Claude.** Use an inline custom visual on supported surfaces. A rendered
+  Artifact is another way to keep the interaction in the conversation.
+  [Claude custom visuals](https://support.claude.com/en/articles/13979539-custom-visuals-in-chat-and-cowork)
+- **Gemini and other hosts.** Use a native inline visual if exposed in that
+  chat or a rendered preview such as Gemini Canvas. A short comparison or
+  labeled sketch works in text-only sessions. [Gemini Canvas](https://support.google.com/gemini/answer/16047321)
+
+Use an interactive renderer to show the control and result in the reply. A
+learner should be able to act on the model and immediately see what changed.
+For a process, make back/next or a step selector change the relevant components.
+For a graph, update the curve or marker and its numeric readout together.
+
+## Match the interaction to the question
 
 | Learning obstacle | Interaction with a reason to use it |
 | --- | --- |
@@ -13,16 +33,25 @@ looked, and a new transfer or recall question after feedback.
 | A measured signal seems disconnected from a mechanism | Highlight the hydrogens behind a selected NMR signal, or link measured absorbance to transmitted light and path length. |
 | A trend alone hides its limits | Move through an equilibrium or selection model and ask where the assumed relationship stops applying. |
 
+For a student's question about hemoglobin and pH, show oxygen saturation
+against oxygen partial pressure. Keep the reference curve fixed and let the
+learner adjust pH. At a fixed oxygen partial pressure, the model should show
+lower saturation as pH decreases. Label the curves and state that the values
+are illustrative. [OpenStax Biology · gas transport](https://openstax.org/books/biology-2e/pages/39-4-transport-of-gases-in-human-bodily-fluids)
+
+## Verify the science and interaction
+
 A figure should encode the science directly. Use directional arrows, orientation
 and compartment names, distinctive encodings that work without color, and
 consistent scales and units across conditions. For a molecular model specify
 what species or system it represents and which structural features are
 schematic. For a quantitative model state equations, fixed parameters, units,
 and the valid domain. Distinguish simulated values from measurements. Check
-conservation, charge, strand or arrow direction, units, and limiting cases as
-applicable. Include descriptions of the result and labeled keyboard controls.
-Use original diagrams and sample data, or link directly to an appropriate
-reference visual. Keep course exercises at the conceptual study level.
+the initial state and at least one changed state against conservation, charge,
+strand or arrow direction, units, and limiting cases as applicable. When a
+preview can be tested, change the control and inspect the resulting display.
+Include a text equivalent and labeled keyboard controls. Use original diagrams
+and sample data. Keep course exercises at the conceptual study level.
 
 ## Teaching and design sources
 
