@@ -11,32 +11,56 @@ which skills you can use independently, and revisits weak spots.
 
 ## Start tutoring
 
-**Any chat.** Open the [chat prompt](https://vajraaaang.github.io/socratic-bio-tutor/tutor-prompt.txt).
-Paste its contents into a new ChatGPT, Claude, Gemini, or other LLM chat,
-followed by your study request. Paste your notes or attach them if your chat
-supports file uploads.
+### Install from the GitHub link
 
-> Teach me from these BIO SCI 98 notes. Focus on how to tell competitive and
-> pure noncompetitive inhibition apart.
+In a **ChatGPT Work** chat with Skills available, paste this message.
 
-> Tutor me on CHEM 51A stereochemistry. I can assign priorities and get turned
-> around when the lowest-priority group points toward me.
+```text
+Can you install this GitHub as a skill?
+https://github.com/Vajraaaang/socratic-bio-tutor/blob/main/socratic-tutor/SKILL.md
 
-For a reusable setup, put the chat prompt in **Project settings → Instructions**
-in a ChatGPT Project or **Explore Gems → New Gem** in Gemini. Then send your
-study request inside the project or Gem. [ChatGPT Projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt) · [Gemini Gems](https://support.google.com/gemini/answer/15235603)
+Use Socratic Bio Tutor as the display name. Install the full socratic-tutor folder, including its references and license.
+```
 
-### Install as a skill
+You can also select `@skill-creator` before sending the message. Choose
+**Install** when offered and check that the skill
+appears in **Plugins → Skills**. [ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) · [ChatGPT Work skill creator](https://learn.chatgpt.com/docs/build-skills#create-a-skill)
+
+For **Codex**, you can paste the same message. For explicit installation, ask
+`$skill-installer` to install the [complete GitHub skill folder](https://github.com/Vajraaaang/socratic-bio-tutor/tree/main/socratic-tutor).
+[Codex skill installer](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use)
+
+### Use the tutor
+
+Open a new chat, attach or paste your notes, and send a study request.
+
+> Use Socratic Bio Tutor to teach me from these BIO SCI 98 notes.
+> Start with enzyme inhibition and ask me one question at a time.
+
+You can give it a topic instead of notes, for example, “Use Socratic Bio Tutor
+to teach me CHEM 51A stereochemistry.” In ChatGPT you can also select the
+installed skill with `@`. In Codex you can use `$socratic-tutor`.
+[Skill invocation](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills)
+
+### Install with the ZIP
 
 [**Download socratic-tutor.zip**](https://github.com/Vajraaaang/socratic-bio-tutor/releases/latest/download/socratic-tutor.zip)
 
 | Where | How |
 | --- | --- |
 | **Claude** | Enable code execution and file creation if prompted. Open **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP, and enable it. [Claude Skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude) |
-| **ChatGPT Skills** | In an eligible workspace, open **Plugins → Skills → Create → Upload from your computer** and choose the ZIP. Availability depends on your workspace. The chat prompt above also works for ordinary chats. [ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) |
-| **Codex** | Unzip the folder into `~/.agents/skills/` or a project's `.agents/skills/`. Start with `$socratic-tutor Teach me BIO SCI 97 linkage.` [Codex Skills](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) |
+| **ChatGPT Skills** | In an eligible workspace, open **Plugins → Skills → Create → Upload from your computer** and choose the ZIP. Availability depends on your workspace. [ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) |
+| **Codex** | Unzip the folder into `~/.agents/skills/` or a project's `.agents/skills/`. [Codex Skills](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) |
 | **Claude Code** | Unzip the folder into `~/.claude/skills/` or a project's `.claude/skills/`. Start with `/socratic-tutor Teach me acid–base equilibria.` [Claude Code Skills](https://code.claude.com/docs/en/skills#choose-where-skills-load) |
 | **Gemini CLI** | Add the unzipped folder to your workspace's `.agents/skills/` and run `/skills reload`. Then ask to use `socratic-tutor`. [Gemini CLI Skills](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/skills.md) |
+
+### Use in any chat
+
+Paste the [chat prompt](https://vajraaaang.github.io/socratic-bio-tutor/tutor-prompt.txt)
+into ChatGPT, Claude, Gemini, or another LLM, followed by your study request.
+To reuse it, add the prompt to **Project settings → Instructions** in a
+ChatGPT Project or **Explore Gems → New Gem** in Gemini.
+[ChatGPT Projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt) · [Gemini Gems](https://support.google.com/gemini/answer/15235603)
 
 Use **show progress** to see your mastery map, **harder** or **easier** to
 change the difficulty, and **just tell me** when you need the answer to the

@@ -1,6 +1,9 @@
 ---
 name: "socratic-tutor"
 description: "Use when asked to teach, tutor, quiz, or drill a topic. Diagnose and build mastery one question at a time with student notes and optional biology and chemistry visuals."
+license: MIT
+metadata:
+  skill-folder: "https://github.com/Vajraaaang/socratic-bio-tutor/tree/main/socratic-tutor"
 ---
 
 # Socratic Tutor
@@ -110,6 +113,8 @@ ask for that excerpt. Apply the intent guard to notes shared without a clear req
 
 Use the student's course code, syllabus, and stated goals to set scope. For UCI,
 consult the [UCI curriculum reference](references/uci-curriculum.md) if available.
+The [public skill folder](https://github.com/Vajraaaang/socratic-bio-tutor/tree/main/socratic-tutor)
+contains the license and both reference files.
 The official [BIO SCI index](https://catalogue.uci.edu/allcourses/bio_sci/) and
 [CHEM index](https://catalogue.uci.edu/allcourses/chem/) cover course-specific
 topics. Confirm the catalogue year or quarter when it affects the answer. Use
@@ -129,25 +134,26 @@ case or closed-model retrieval using the usual teaching loop. A result reported
 from the model alone is insufficient evidence for a mastery promotion.
 
 Use the anchors below with the base URL
-`https://vajraaaang.github.io/socratic-bio-tutor/`. Send the exact model link and
-end the message with the question. Students can open the link in any browser.
+`https://vajraaaang.github.io/socratic-bio-tutor/`. Send the exact model link,
+name one control to change, and end the message with the question. The learner
+can open the listed model in their browser and report what they observe.
 
-| Model | Anchor |
-| --- | --- |
-| Enzyme rates and inhibition | `#enzyme-kinetics` |
-| DNA, transcription, translation and coding mutations | `#gene-expression` |
-| Linkage, recombination and testcrosses | `#linked-genes` |
-| Lac operon regulation | `#gene-regulation` |
-| Osmosis and tonicity | `#membrane-transport` |
-| Neuron action potential | `#action-potential` |
-| Population growth and density dependence | `#population-growth` |
-| Allele frequencies and selection | `#natural-selection` |
-| Acid–base titration | `#titration` |
-| Catalysis, activation energy and reaction free energy | `#reaction-energy` |
-| Fischer projections and R/S | `#stereochemistry` |
-| Proton NMR | `#proton-nmr` |
-| Beer–Lambert absorbance | `#absorbance` |
-| Quantum particle in a box | `#particle-in-a-box` |
+| Model | Anchor | Controls |
+| --- | --- | --- |
+| Enzyme rates and inhibition | `#enzyme-kinetics` | Inhibition, Substrate [S], Inhibitor ratio [I]/Kᵢ |
+| DNA, transcription, translation and coding mutations | `#gene-expression` | DNA variant, Show through |
+| Linkage, recombination and testcrosses | `#linked-genes` | Allele arrangement, Recombinant gametes |
+| Lac operon regulation | `#gene-regulation` | Lactose, Glucose |
+| Osmosis and tonicity | `#membrane-transport` | Bath osmolarity |
+| Neuron action potential | `#action-potential` | Stimulus depolarization, Inspect time |
+| Population growth and density dependence | `#population-growth` | Growth model, Initial population N₀, Carrying capacity K, Intrinsic growth rate r |
+| Allele frequencies and selection | `#natural-selection` | Starting A frequency, AA relative fitness, Aa relative fitness, aa relative fitness |
+| Acid–base titration | `#titration` | Acid, Strong base added |
+| Catalysis, activation energy and reaction free energy | `#reaction-energy` | Pathway, Product free energy relative to reactants |
+| Fischer projections and R/S | `#stereochemistry` | Projection, Page orientation, CIP priorities and configuration |
+| Proton NMR | `#proton-nmr` | Ester, Spectrum window |
+| Beer–Lambert absorbance | `#absorbance` | Solute concentration, Optical path length |
+| Quantum particle in a box | `#particle-in-a-box` | Quantum number n, Well width L |
 
 For an uncovered concept, use the host's interactive preview or an attached,
 self-contained HTML file if available and useful. Keep it dependency-free and
