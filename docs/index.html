@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive biology and chemistry models for undergraduate study with Socratic Bio Tutor.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Interactive Science Lab | Socratic Bio Tutor</title>
+  <link rel="stylesheet" href="lab.css">
+  <script type="module" src="visuals/lab.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#experiment">Skip to experiment</a>
+  <header class="masthead">
+    <div class="frame masthead-content">
+      <span class="brand">Socratic Bio Tutor</span>
+      <a class="install-link" href="https://github.com/Vajraaaang/socratic-bio-tutor#start-tutoring">Use the tutor <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="lab-title">
+    <div class="frame">
+      <h1 id="lab-title">Interactive science lab</h1>
+      <p>Make a prediction, change one variable, and explain what you observe.</p>
+    </div>
+  </section>
+
+  <div class="frame workspace">
+    <nav id="library" class="library" aria-label="Interactive models"></nav>
+
+    <main id="experiment" class="experiment">
+      <noscript>
+        <p>Enable JavaScript to explore the models, or use the <a href="https://github.com/Vajraaaang/socratic-bio-tutor#start-tutoring">text-based tutor</a>.</p>
+      </noscript>
+      <div id="compact-library" class="compact-library" hidden>
+        <label for="model-picker">Choose a model</label>
+        <select id="model-picker"></select>
+      </div>
+      <article id="model" aria-labelledby="model-title" hidden>
+        <header class="model-heading">
+          <p id="course" class="course"></p>
+          <h2 id="model-title"></h2>
+          <p id="model-intro" class="model-intro"></p>
+        </header>
+        <div class="prediction">
+          <strong>Predict first</strong>
+          <p id="prediction"></p>
+        </div>
+
+        <div class="trial">
+          <section class="control-panel" aria-labelledby="control-title">
+            <h3 id="control-title">Change the model</h3>
+            <div id="controls"></div>
+            <button type="button" id="reset">Reset controls</button>
+          </section>
+          <figure class="figure">
+            <p class="figure-hint">Scroll the figure sideways to explore it.</p>
+            <div class="figure-scroll" role="group" aria-label="Model figure">
+              <canvas id="model-canvas" width="720" height="400" role="img" aria-describedby="model-summary"></canvas>
+            </div>
+            <figcaption class="readout" role="status" aria-atomic="true">
+              <dl id="metrics"></dl>
+              <p id="model-summary"></p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <details id="model-details">
+          <summary>Model assumptions and source</summary>
+          <p id="assumptions"></p>
+          <a id="model-source"></a>
+        </details>
+      </article>
+    </main>
+  </div>
+
+  <footer class="frame footer">
+    <a href="https://github.com/Vajraaaang/socratic-bio-tutor/blob/main/socratic-tutor/references/uci-curriculum.md">UCI curriculum guide</a>
+    <a href="https://github.com/Vajraaaang/socratic-bio-tutor">GitHub repository</a>
+  </footer>
+</body>
+</html>
